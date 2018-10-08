@@ -4,6 +4,7 @@
 Code that writes code.
 
 
+- - - - - -
 
 # QUICK START
 Assume you already have the following class:
@@ -21,8 +22,6 @@ class RESTfulLogin(PyflectiveEncoder):
         self.password = pasw
         super(RESTfulLogin, self).__init__(*args, **kwargs)
 ```
-
-### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 
 ###### DECLARE AND MANIPULATE RESTfulLogin WITHOUT IMPORTING THE DEPENDENCIES
@@ -64,4 +63,7 @@ user_phantom.__setattr__("username", "ALTERED_Phantom")
 user_mortal.username = "ALTERED_Mortal"
 ```
 
-### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+- - - - - -
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
