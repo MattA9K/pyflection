@@ -22,7 +22,7 @@ class RESTfulLogin(PyflectiveEncoder):
         super(RESTfulLogin, self).__init__(*args, **kwargs)
 ```
 
-### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 
 # DECLARE AND MANIPULATE RESTfulLogin WITHOUT IMPORTING THE DEPENDENCIES
@@ -44,8 +44,7 @@ RESTfulLogin_Reflection = getattr(module, model_name)
 
 
 
-# Optional, stripped_props is a list of the properties
-# defined for RESTfulLogin.
+# Optional, stripped_props is a list of the properties defined for RESTfulLogin.
 raw_properties = dir(RESTfulLogin_Reflection)
 stripped_props = NonPropertyStripper.clean(raw_properties)
 # stripped_props = ["username", "password"]
@@ -65,4 +64,4 @@ user_phantom.__setattr__("username", "ALTERED_Phantom")
 user_mortal.username = "ALTERED_Mortal"
 ```
 
-### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
