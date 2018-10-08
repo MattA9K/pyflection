@@ -18,7 +18,7 @@ EmployeeR = getattr(__import__("my_classes"),
 obj_with_name = EmployeeR
 obj_with_name.__setattr__("name", "NEW NAME")
 ```
-### Hard Coded:
+### Without Reflection:
 ```python
 from my_classes import Employee
 obj_with_name = Employee
