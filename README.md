@@ -1,11 +1,30 @@
 # pyflection 
-### Python3
+## Python3
 ###### Matt Andrzejczuk 2018
-Code that writes code.
 
+Declaring and modifying classes dynamically using strings. When many classes in your project share the same property labels, Reflection can cut out dozens of lines of code in a single function.
 
 - - - - - -
-
+### How To Use:
+my_classes.py
+```python
+class Employee(PyflectiveEncoder):
+    name = ""
+```
+### With Reflection:
+```python
+EmployeeR = getattr(__import__("my_classes"),
+                   "Employee")
+obj_with_name = EmployeeR
+obj_with_name.__setattr__("name", "NEW NAME")
+```
+### Hard Coded:
+```python
+from my_classes import Employee
+obj_with_name = Employee
+obj_with_name.name = "NEW NAME"
+```
+- - - - - -
 # QUICK START
 Assume you already have the following class:
 ```python
