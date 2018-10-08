@@ -25,7 +25,10 @@ obj_with_name = Employee()
 obj_with_name.name = "NEW NAME"
 ```
 - - - - - -
-# QUICK START
+# Quick Start
+unzip then run:
+`python3 example.py`
+
 Assume you already have the following class:
 ```python
 from pyflection import PyflectiveEncoder
