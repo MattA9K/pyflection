@@ -11,14 +11,14 @@ my_classes.py
 class Employee(PyflectiveEncoder):
     name = ""
 ```
-### With Reflection:
+### Import Employee Dependency With Reflection:
 ```python
 EmployeeR = getattr(__import__("my_classes"),
                    "Employee")
 obj_with_name = EmployeeR()
 obj_with_name.__setattr__("name", "NEW NAME")
 ```
-### Without Reflection:
+### Import Employee Dependency Without Reflection:
 ```python
 from my_classes import Employee
 obj_with_name = Employee()
