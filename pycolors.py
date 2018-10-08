@@ -1,3 +1,5 @@
+# Matt Andrzejczuk 2018
+
 class ink:
     FAIL = '\033[91m'
     ENDC = '\033[0m'
