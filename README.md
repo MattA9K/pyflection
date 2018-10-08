@@ -7,7 +7,7 @@ Code that writes code.
 
 # QUICK START
 Assume you already have the following class:
-```
+```python
 from pyflection import PyflectiveEncoder
 
 # Extremely Simple Class.
@@ -26,7 +26,7 @@ class RESTfulLogin(PyflectiveEncoder):
 
 
 # DECLARE AND MANIPULATE RESTfulLogin WITHOUT IMPORTING THE DEPENDENCIES
-```
+```python
 from pyflection import NonPropertyStripper
 from pycolors import ink
 import os
