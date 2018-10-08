@@ -1,3 +1,5 @@
+# Matt Andrzejczuk 2018
+
 from json import JSONEncoder
 from pyflection import PyflectiveEncoder
 
