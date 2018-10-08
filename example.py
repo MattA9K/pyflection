@@ -1,9 +1,9 @@
-# Matt Andrzejczuk 2018
-from pyflection import NonPropertyStripper, PyflectiveEncoder
+
+from pyflection import NonPropertyStripper
 from pycolors import ink
 import os
 
-from dummy_reflective_class import RESTfulLogin
+
 
 
 
@@ -12,15 +12,18 @@ from dummy_reflective_class import RESTfulLogin
 os.system("clear")
 
 
-### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 #   QUICK START
-### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+# IMPORT WITH REFLECTION:
 model_name = "RESTfulLogin"
 lib = "dummy_reflective_class"
 module = __import__(lib)
 RESTfulLogin_Reflection = getattr(module, model_name)
-raw_properties = dir(RESTfulLogin_Reflection)
-stripped_props = NonPropertyStripper.clean(raw_properties)
+# ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+# IMPORT WITHOUT REFLECTION:
+from dummy_reflective_class import RESTfulLogin
+# ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 
 user_phantom = RESTfulLogin_Reflection(user="phantom", pasw="123123")
@@ -33,7 +36,7 @@ mortal_username = user_mortal.username
 
 user_phantom.__setattr__("username", "ALTERED_Phantom")
 user_mortal.username = "ALTERED_Mortal"
-### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+### ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
 
 
 
@@ -43,7 +46,6 @@ RESTfulLogin_Reflection = getattr(module, model_name)
 
 # 1. GET ALL RAW METHODS AND PROPERTIES FROM INSTANCE OF: RESTfulLogin
 raw_properties = dir(RESTfulLogin_Reflection)
-
 ink.print_orange("\nRAW_PROPERTIES: ", "\n")
 ink.print_lightcyan("dir(", "")
 ink.print_purple("RESTfulLogin_reflection", "")
@@ -51,10 +53,8 @@ ink.print_lightcyan(")", "\n")
 ink.print_lightred(raw_properties, "\n\n")
 
 
-# 2. RESTfulLogin INSTANCE SHOULD NOW HAVE ONLY A username AND password LIKE THE CLASS:
+# 2. stripped_props SHOULD NOW HAVE ONLY A username AND password LIKE THE CLASS:
 stripped_props = NonPropertyStripper.clean(raw_properties)
-
-
 ink.print_yellow("STRIPPED: ", "\n")
 ink.print_lightcyan("dir(", "")
 ink.print_purple("RESTfulLogin_reflection", "")
