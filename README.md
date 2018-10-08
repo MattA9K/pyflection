@@ -15,13 +15,13 @@ class Employee(PyflectiveEncoder):
 ```python
 EmployeeR = getattr(__import__("my_classes"),
                    "Employee")
-obj_with_name = EmployeeR
+obj_with_name = EmployeeR()
 obj_with_name.__setattr__("name", "NEW NAME")
 ```
 ### Without Reflection:
 ```python
 from my_classes import Employee
-obj_with_name = Employee
+obj_with_name = Employee()
 obj_with_name.name = "NEW NAME"
 ```
 - - - - - -
