@@ -1,4 +1,4 @@
-
+# Matt Andrzejczuk 2018
 from pyflection import NonPropertyStripper, PyflectiveEncoder
 from pycolors import ink
 import os
