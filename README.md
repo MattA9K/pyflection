@@ -4,6 +4,21 @@
 
 Declaring and modifying classes dynamically using strings. When many classes in your project share the same property labels, Reflection can cut out dozens of lines of code in a single function.
 
+
+## Installation
+
+##### Add to your `requirements.txt`:
+```bash
+-e git://github.com/MattAndrzejczuk/pyflection.git#egg=pyflection
+```
+* or *
+
+##### Install From Terminal
+```bash
+pip3 install git+https://github.com/MattAndrzejczuk/pyflection.git
+```
+
+
 - - - - - -
 ### How To Use:
 my_classes.py
@@ -49,7 +64,6 @@ class RESTfulLogin(PyflectiveEncoder):
 ###### DECLARE AND MANIPULATE RESTfulLogin WITHOUT IMPORTING THE DEPENDENCIES
 ```python
 from pyflection import NonPropertyStripper
-from pycolors import ink
 import os
 
 # 'user_mortal' cannot work without this import:
